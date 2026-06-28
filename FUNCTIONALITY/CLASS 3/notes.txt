@@ -1,0 +1,11 @@
+String : it is a group of characters written inside  " "
+
+Array : it is our first data structure, where elements are stored in continuous memory location of any datatype
+
+Object : object means key-value pair
+
+{
+    key : value
+}
+
+Objects of Object

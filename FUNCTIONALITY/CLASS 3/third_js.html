@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS_3</title>
+  </head>
+  <body>
+    <script>
+      let name = "Ayan";
+      console.log(typeof name); // String
+
+      // it is zero based indexing
+      // that count starts from 0 & goes till length-1
+
+      console.log(name.length); // 4
+
+      console.log(name[0]); // A
+      console.log(name[1]); // y
+      console.log(name[2]); // a
+      console.log(name[3]); // n
+      console.log(name[4]); // undefined
+
+      // slice(start_index, (end-1)_index)
+      // toUpperCase()
+      // toLowerCase()
+      // startsWith()
+      // endsWith()
+      // trim()
+
+      console.log(name.slice(0, 3)); // Aya
+      console.log(name.toUpperCase()); // AYAN
+      console.log(name.toLowerCase()); // ayan
+      console.log(name.startsWith("A")); // true
+      console.log(name.endsWith("a")); // false
+
+      // split() : it breaks the string into the array
+      console.log(name.split("")); // ['A', 'y', 'a', 'n']
+
+      let info = "Ayan-SJC-AKG";
+      console.log(info.split("--")); // ['Ayan-SJC-AKG']
+
+      let arr = [10, 20, "Ayan", true, undefined, null];
+      console.log(arr); // [10, 20, 'Ayan', true, undefined, null]
+
+      // push     // add element from the end
+      // pop     // remove the element from the end
+      // shift     // remove from starting
+      // unshift     // add from starting
+
+      arr.push(100);
+      arr.pop();
+      arr.shift();
+      arr.unshift(200);
+
+      console.log(arr); // [200, 20, 'Ayan', true, undefined, null]
+
+      // splice(start_index, delete_count, elements_to_add)     // if we wnat to remove the middle
+      arr.splice(1, 3, "umar", "aasim");
+      console.log(arr); // [200, 'umar', 'aasim', undefined, null]
+
+      // sort()
+      // reverse()
+      // concar()
+      // slice()
+      // join()
+
+      console.log(arr.sort()); // [200, 'aasim', null, 'umar', undefined]
+      console.log(arr.sort().reverse()); // [undefined, 'umar', null, 'aasim', 200]
+
+      let newArr = [100, 200, 300, 400, 500, 600];
+      let combineArr = arr.concat(newArr);
+
+      console.log(combineArr); //[undefined, 'umar', null, 'aasim', 200, 100, 200, 300, 400, 500, 600]
+
+      console.log(combineArr.slice(0, 5)); // [undefined, 'umar', null, 'aasim', 200]
+
+      // join() : to combine arr in to the string
+      console.log(combineArr.join()); // ,umar,,aasim,200,100,200,300,400,500,600
+
+      // map(callback)
+      // filter(callback)
+      // reduce(callback)
+      // spread & rest
+
+      // what is a callback ?
+      // callback is a function inside another function waiting for execution
+
+      // map() : it maps all elements
+      combineArr.map((e) => {
+        console.log(e + 5);
+      });
+
+      // filter() : it filters outs the match element & returns an array
+      let nums = [10, 15, 20, 25, 30, 35, 40, 45, 50];
+      let filterNums = nums.filter((e) => {
+        return e % 2 == 0;
+      });
+      console.log(filterNums); // [10, 20, 30, 40, 50]
+
+      // reduce() : it reduces the array into the single value
+      let sum = nums.reduce((ac, e) => {
+        ac = ac + e;
+        return ac;
+      }, 0);
+      console.log(sum); // 270
+
+      // Spread & Rest are written as ...
+      let copy = [...nums, "Hello", "Bye"];
+      console.log(copy); // [10, 15, 20, 25, 30, 35, 40, 45, 50, 'Hello', 'Bye']
+
+      // rest is used for multiple parameters
+      function nums1(...args) {
+        // it can take multiple arguments & will convert this into the array
+        console.log(args);
+      }
+
+      let obj = {
+        name: "Ayan",
+        age: 20,
+      };
+      console.log(obj); // {name: 'Ayan', age: 20}
+
+      // Method 1 : using .keyname
+      // Method 2 : using ["keyname"]
+
+      console.log(obj.name); // Ayan
+      console.log(obj["age"]); // 20
+
+      delete obj.age;
+      console.log(obj); // {name: 'Ayan'}
+
+      // if we want to add any key to the object
+      // .keyname / ["keyname"] = value
+
+      obj.city = "Noida";
+      obj.name = "Hello";
+      console.log(obj); // {name: 'Hello', city: 'Noida'}
+
+      let newObj = {
+        name: "Ayan",
+        skills: {
+          skill_1: "react",
+          skill_2: "node",
+          skill_3: "express",
+        },
+      };
+      console.log(newObj); // {name: 'Ayan', skills: {skill_1: 'react', skill_2: 'node', skill_3: 'express'}}
+
+      console.log(newObj.skills.skill_3); // express
+    </script>
+  </body>
+</html>
