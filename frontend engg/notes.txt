@@ -2,7 +2,7 @@ CLASS 1 =>
 
 REACT : it is library of JS
 
-Jsx : Javascript Extensible, where we write js in the HTML
+jsx : Javascript Extensible, where we write js in the HTML
 import : to access any component we build
 export : to export our component that other can use
 
