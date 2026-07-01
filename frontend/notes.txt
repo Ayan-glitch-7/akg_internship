@@ -78,4 +78,12 @@ Form Handling ?
     using packages i.e React hook Form
 
 
-Interview : Controlled statements & Uncontrolled statements     
+Interview : Controlled statements & Uncontrolled statements 
+
+
+
+CLASS 3 =>
+
+API fetch, Routers
+
+React Routing : npm i react-router-dom
